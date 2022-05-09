@@ -1,0 +1,755 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* //////HEADER//////*/
+/* Étape 3 : Intégrez le header du projet */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.menu a {
+    padding: 20px;
+    position: relative;
+    color: black;
+}
+
+.menu a:after {
+    content: "";
+    position: absolute;
+    background-color: #F2F2F2;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 0;
+}
+
+.menu a:hover {
+    color: #0065FC;
+}
+
+.menu a:hover:after {
+    background-color: #0065FC;
+}
+
+.header-logo img {
+    width: 120px;
+    height: auto;
+}
+
+/* //////BODY//////*/
+/* Étape 4 : Ajoutez le formulaire de recherche */
+main {
+    width: 90%;
+    margin: auto;
+}
+
+.head p {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.search-desktop {
+    padding: 16px;
+    color: black;
+    background-color: #F2F2F2;
+    border-radius: 10px 0 0 10px;
+}
+
+.search input[type="text"] {
+    padding: 15px;
+    border: 1px solid #F2F2F2;
+    outline: none;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    left: -5px;
+}
+
+.search input[type="text"]::placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+.search input[type="submit"] {
+    padding: 15px;
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 0 10px 10px 0;
+    width: 120px;
+    height: 50px;
+    position: relative;
+    left: -10px;
+    cursor: pointer;
+}
+
+.search input[type="submit"]:hover {
+    background-color: #DEEBFF;
+    color: #0065FC;
+}
+
+.search-mobile {
+    padding: 15px;
+    background-color: #0065FC;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    left: -164px;
+    display: none;
+}
+
+/* Étape 5 : Ajout de la partie Filtres */
+.filters {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.filters p {
+    margin-right: 20px;
+    font-weight: bold;
+}
+  
+.filters ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+  
+.filters ul li {
+    font-weight: bold;
+    border: solid 2px #F2F2F2;
+    padding: 0 20px 0 0;
+    margin-right: 20px;
+    border-radius: 200px;
+}
+  
+.filters ul li:hover {
+    cursor: pointer;
+    background: #DEEBFF;
+    transition-duration: 0.25s;
+}
+  
+.filters ul li:hover .icon-filter {
+    background: white;
+    transition-duration: 0.25s;
+}
+  
+.icon-filter {
+    background-color: #DEEBFF;
+    color: #0065fc;
+    padding: 18px;
+    border-radius: 200px;
+    margin-right: 15px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.icon-info {
+    color: #0065fc;
+    font-size: 16px;
+    padding: 5px 9px 5px 9px;
+    border: 1px solid #DEEBFF;
+    border-radius: 2000px;
+    margin-right: 20px;
+}
+
+/* Étape 6 : Réalisez la “card” présente dans
+“Hébergements à Marseille” */
+#cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cards span {
+    font-weight: bold;
+}
+
+.cards-marseille {
+    width: 67%;
+    border-radius: 5%;
+    background-color: #F2F2F2;
+}
+
+#heb-title {
+    margin: 3.5% 0 0 3%;
+}
+
+.strong {
+    margin: 2% 0 0 3.5%;
+    font-weight: bold;
+}
+
+.first-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.first-card {
+    width: 28%;
+    height: 220px;
+    border-radius: 5%;
+    background-color: white;
+    font-size: 14px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 2%;
+    color: black;
+}
+  
+.first-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    color: #0065FC;
+}
+
+.first-card-image {
+    padding: 1.5%;
+    overflow: hidden;
+    width: 100%;
+    height: 70%;
+}
+
+.first-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5% 5% 0 0;
+    object-fit: cover;
+}
+
+.element {
+    margin: 1% 6%;
+}
+
+.first-card-note {
+    color: #0065FC;
+}
+
+.star-in {
+    color: #0065FC;
+}
+
+.star-out {
+    color: #F2F2F2;
+}
+
+/* Étape 7 : Réalisez la “card” présente dans “Les plus
+populaires” */
+.cards-popular {
+    width: 30%;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    padding: 30px 0;
+}
+
+.second-cards-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+}
+
+.second-cards-title h2 {
+    margin: 0;
+}
+
+.second-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-card {
+    width: 85%;
+    height: 150px;
+    display: flex;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 14px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 20px;
+    color: black;
+}
+
+.second-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    color: #0065FC;
+}
+
+.second-card-image {
+    padding: 5px;
+    width: inherit;
+}
+
+.second-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+}
+
+.cards-popular-first {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    width: 110%;
+}
+
+.cards-popular-second h3 {
+    margin: 0;
+}
+
+.cards-popular-second p {
+    margin-top: 8px;
+}
+
+
+.cards-popular-second {
+    flex: 1;
+}
+
+.second-cards-title a {
+    font-size: 20px;
+    color: black;
+}
+
+/* Étape 9 : Intégrez le conteneur “Activités à Marseille” */
+.cards-activities h2 {
+    margin: 40px 0 10px 0;
+}
+
+.third-cards {
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+}
+
+.third-card {
+    width: 22%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-bottom: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.double-card {
+    width: 22%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+    color: black;
+}
+
+.third-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    color: #0065FC;
+}
+
+.third-card img {
+    width: 100%;
+    object-fit: cover;
+    flex: 1;
+}
+
+.one img {
+    object-fit: cover;
+    width: 100%;
+    height: 80%;
+}
+
+.two img {
+    object-fit: cover;
+    width: 100%;
+    height: 80%;
+}
+
+.one {
+    width: 100%;
+    height: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.two {
+    width: 100%;
+    height: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.one:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    color: #0065FC;
+}
+
+.two:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    color: #0065FC;
+} 
+
+.double-card div {
+    height: 20%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.third-card div {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.double-card h3 {
+    margin: 0;
+}
+
+/* //////FOOTER//////*/
+/* Étape 10 : Implémentez le footer */
+.footer {
+    background-color: #F2F2F2;
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+
+.item li {
+    padding: 5px 0;
+}
+
+.item ul {
+    padding: 0;
+}
+
+.item {
+    padding: 30px;
+}
+
+.second, .third {
+    margin-left: 180px;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////MEDIA QUERIES//////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media all and (max-width: 1208px)
+{
+    .element {
+        margin: 1% 6%;
+        font-size: 14px;
+    }
+
+    .second-cards-title {
+        font-size: 14px;
+    }
+
+    .cards-popular-first {
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: 1061px)
+{
+    .element {
+        font-size: 12px;
+    }
+
+    .second-cards-title {
+        font-size: 12px;
+    }
+
+    .cards-popular-first {
+        font-size: 12px;
+    }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////TABLETTE///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media all and (max-width: 992px)
+{
+    /* //////BODY//////*/
+    /* Étape 5 : Ajout de la partie Filtres */
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .filters ul {
+        flex-wrap: wrap;
+    }
+
+    .filters ul li {
+        margin-bottom: 10px;
+    }
+
+    /* Étape 6 : Réalisez la “card” présente dans
+    “Hébergements à Marseille” */
+    #cards {
+        flex-direction: column;
+    }
+
+    .cards-marseille {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+
+    .first-card {
+        height: 300px;
+        font-size: 12px;
+        width: 40%;
+    }
+
+    #heb-title {
+        margin: 3.5% 0 0 4%;
+    }
+
+    .strong {
+        margin: 2% 0 4% 4%;
+    }
+
+    .element {
+        margin: 1% 6%;
+        font-size: 16px;
+    }
+
+    /* Étape 7 : Réalisez la “card” présente dans “Les plus
+    populaires” */
+    .cards-popular {
+        width: 100%;
+        border-radius: 20px;
+        background-color: #F2F2F2;
+        padding: 20px 0;
+    }
+
+    .second-card {
+        height: 160px;
+        font-size: 20px;
+    }
+
+    .cards-popular-first {
+        width: 180%;
+    }
+
+    .second-cards-title {
+        font-size: 16px;
+    }
+
+    .cards-popular-first {
+        font-size: 16px;
+    }
+
+    /* //////FOOTER//////*/
+    /* Étape 10 : Implémentez le footer */
+    .second, .third {
+        margin-left: 20px;
+    }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////MOBILE/////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media all and (max-width: 767px)
+{
+    /* //////HEADER//////*/
+    /* Étape 3 : Intégrez le header du projet */
+    .header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu a {
+        padding: 5px;
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+    }
+
+    .menu a:after {
+        top: 100%;
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+    }
+
+    /* //////BODY//////*/
+    /* Étape 4 : Ajoutez le formulaire de recherche */
+    .search input[type="submit"] {
+        display: none;
+    }
+
+    .search-mobile {
+        display: inline;
+        left: -14px;
+    }
+
+    /* Étape 5 : Ajout de la partie Filtres */
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .filters ul {
+        flex-wrap: wrap;
+    }
+
+    .filters ul li {
+        margin-bottom: 20px;
+    }
+
+    /* Étape 6 : Réalisez la “card” présente dans
+    “Hébergements à Marseille” */
+    #cards {
+        flex-direction: column-reverse;
+    }
+
+    .cards-marseille{
+        width: 100%;
+        background-color: white;
+    }
+
+    .first-card {
+        width: 85%;
+        height: 280px;
+        font-size: 14px;
+        padding-bottom: 10px;
+        margin: 4%;
+    }
+
+    #heb-title {
+        margin: 6% 0 0 8%;
+    }
+
+    /* Étape 7 : Réalisez la “card” présente dans “Les plus
+    populaires” */
+    .cards-popular {
+        width: 100%;
+    }
+
+    .strong {
+        margin-left: 25px;
+    }
+
+    /* Étape 9 : Intégrez le conteneur “Activités à Marseille” */
+    .cards-activities {
+        margin: 0 25px;
+    }
+
+    .third-cards {
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .third-card {
+        width: 100%;
+        height: 200px;
+    }
+
+    .third-card img {
+        height: 80%;
+    }
+    
+    .double-card {
+        width: 100%;
+        height: 400px;
+        justify-content: flex-start;
+    }
+
+    .one {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .two {
+        width: 100%;
+        height: 50%;
+    }
+
+    /* //////FOOTER//////*/
+    /* Étape 10 : Implémentez le footer */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .item {
+        padding: 0 20px;
+    }
+
+    .second, .third {
+        margin-left: 0;
+    }
+}
+
+@media all and (max-width: 400px)
+{
+    .first-card {
+        height: 200px;
+    }
+}
+
+@media all and (max-width: 332px)
+{
+    .search input[type="text"] {
+        width: 160px;
+    }
+
+    .element {
+        font-size: 14px;
+    }
+
+    .second-cards-title {
+        font-size: 14px;
+    }
+
+    .cards-popular-first {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
